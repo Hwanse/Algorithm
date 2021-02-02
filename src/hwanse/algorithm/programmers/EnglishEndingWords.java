@@ -3,12 +3,11 @@ package hwanse.algorithm.programmers;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Stack;
 
-public class Solution1_8 {
+public class EnglishEndingWords {
 
   public static void main(String[] args) {
-    Solution1_8 solution = new Solution1_8();
+    EnglishEndingWords solution = new EnglishEndingWords();
     String[] words = new String[] {
         "tank", "kick", "know", "wheel", "land", "dream", "mother", "robot", "tank"
     };
@@ -65,7 +64,7 @@ class Rule {
   public boolean checkWordRule(String beforeWord, String currentWord) {
     if (currentWord.length() <= 1 || currentWord.length() > 50) {
       return false;
-    } else if (beforeWord.charAt(beforeWord.length()-1) != currentWord.charAt(0)) {
+    } else if (beforeWord.charAt(beforeWord.length() - 1) != currentWord.charAt(0)) {
       return false;
     } else if (beforeWords.contains(currentWord)) {
       return false;
@@ -79,3 +78,4 @@ class Rule {
   }
 
 }
+
